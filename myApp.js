@@ -1,70 +1,79 @@
-require('dotenv').config();
+import 'mongoose'
+require('dotenv').config()
 
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 
-let Person;
+let Person
 
 const createAndSavePerson = (done) => {
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const createManyPeople = (arrayOfPeople, done) => {
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const findPeopleByName = (personName, done) => {
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const findOneByFood = (food, done) => {
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const findPersonById = (personId, done) => {
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const findEditThenSave = (personId, done) => {
-  const foodToAdd = "hamburger";
+  const foodToAdd = 'hamburger'
 
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const findAndUpdate = (personName, done) => {
-  const ageToSet = 20;
+  const ageToSet = 20
 
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const removeById = (personId, done) => {
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const removeManyPeople = (done) => {
-  const nameToRemove = "Mary";
+  const nameToRemove = 'Mary'
 
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
 const queryChain = (done) => {
-  const foodToSearch = "burrito";
+  const foodToSearch = 'burrito'
 
-  done(null /*, data*/);
-};
+  done(null /*, data*/)
+}
 
-/** **Well Done !!**
-/* You completed these challenges, let's go celebrate !
- */
-
-//----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
-
-exports.PersonModel = Person;
-exports.createAndSavePerson = createAndSavePerson;
-exports.findPeopleByName = findPeopleByName;
-exports.findOneByFood = findOneByFood;
-exports.findPersonById = findPersonById;
-exports.findEditThenSave = findEditThenSave;
-exports.findAndUpdate = findAndUpdate;
-exports.createManyPeople = createManyPeople;
-exports.removeById = removeById;
-exports.removeManyPeople = removeManyPeople;
-exports.queryChain = queryChain;
+export const PersonModel = Person
+const _createAndSavePerson = createAndSavePerson
+export { _createAndSavePerson as createAndSavePerson }
+const _findPeopleByName = findPeopleByName
+export { _findPeopleByName as findPeopleByName }
+const _findOneByFood = findOneByFood
+export { _findOneByFood as findOneByFood }
+const _findPersonById = findPersonById
+export { _findPersonById as findPersonById }
+const _findEditThenSave = findEditThenSave
+export { _findEditThenSave as findEditThenSave }
+const _findAndUpdate = findAndUpdate
+export { _findAndUpdate as findAndUpdate }
+const _createManyPeople = createManyPeople
+export { _createManyPeople as createManyPeople }
+const _removeById = removeById
+export { _removeById as removeById }
+const _removeManyPeople = removeManyPeople
+export { _removeManyPeople as removeManyPeople }
+const _queryChain = queryChain
+export { _queryChain as queryChain }
